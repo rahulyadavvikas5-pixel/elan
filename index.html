@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ELAN CLOTHES | Modern Fashion</title>
+
+    <meta name="description"
+          content="ELAN CLOTHES — contemporary fashion designed for modern lifestyles.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <a href="#home" class="logo">
+        ELAN<span>.</span>
+    </a>
+
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#about">About</a>
+        <a href="#journal">Journal</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+
+        <button id="searchBtn" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+        <button id="themeBtn" aria-label="Theme">
+            <i class="fa-regular fa-moon"></i>
+        </button>
+
+        <button id="bagBtn" class="bag-btn" aria-label="Shopping bag">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span id="bagCount">0</span>
+        </button>
+
+        <button id="menuBtn" class="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= SEARCH ================= -->
+
+<div class="search-panel" id="searchPanel">
+
+    <div class="search-box">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search shirts, jackets, dresses..."
+        >
+
+        <button id="closeSearch">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="eyebrow">
+            NEW SEASON • 2026
+        </p>
+
+        <h1>
+            WEAR YOUR
+            <span>ELAN.</span>
+        </h1>
+
+        <p class="hero-text">
+            Contemporary clothing created for people who
+            believe style is an expression of individuality.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#collection" class="btn primary-btn">
+                Shop Collection
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="#about" class="btn secondary-btn">
+                Our Story
+            </a>
+
+        </div>
+
+        <div class="hero-stats">
+
+            <div>
+                <strong>01</strong>
+                <span>Modern Design</span>
+            </div>
+
+            <div>
+                <strong>02</strong>
+                <span>Premium Fabric</span>
+            </div>
+
+            <div>
+                <strong>03</strong>
+                <span>Conscious Fashion</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- 3D FASHION OBJECT -->
+
+    <div class="hero-visual">
+
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+
+        <div class="fashion-card">
+
+            <div class="card-glow"></div>
+
+            <img
+                src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=900&q=85"
+                alt="ELAN fashion collection"
+            >
+
+            <div class="floating-tag">
+                <span>ELAN</span>
+                <small>EST. 2026</small>
+            </div>
+
+        </div>
+
+        <div class="circle-text">
+            PREMIUM • MODERN • ELAN • PREMIUM • MODERN •
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MARQUEE ================= -->
+
+<div class="marquee">
+
+    <div class="marquee-track">
+
+        <span>ELAN CLOTHES</span>
+        <span>MODERN ESSENTIALS</span>
+        <span>PREMIUM QUALITY</span>
+        <span>CONSCIOUS STYLE</span>
+
+        <span>ELAN CLOTHES</span>
+        <span>MODERN ESSENTIALS</span>
+        <span>PREMIUM QUALITY</span>
+        <span>CONSCIOUS STYLE</span>
+
+    </div>
+
+</div>
+
+
+<!-- ================= COLLECTION ================= -->
+
+<section class="collection section" id="collection">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="eyebrow">SHOP ELAN</p>
+
+            <h2>
+                Latest
+                <em>Collection</em>
+            </h2>
+        </div>
+
+        <p>
+            Elevated essentials designed to move
+            effortlessly between work, weekends and everything
+            in between.
+        </p>
+
+    </div>
+
+
+    <!-- FILTER -->
+
+    <div class="filter-row">
+
+        <button class="filter active" data-category="all">
+            All
+        </button>
+
+        <button class="filter" data-category="shirts">
+            Shirts
+        </button>
+
+        <button class="filter" data-category="jackets">
+            Jackets
+        </button>
+
+        <button class="filter" data-category="dresses">
+            Dresses
+        </button>
+
+        <button class="filter" data-category="pants">
+            Pants
+        </button>
+
+    </div>
+
+
+    <!-- PRODUCTS -->
+
+    <div class="products-grid" id="productsGrid"></div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about section" id="about">
+
+    <div class="about-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1200&q=85"
+            alt="ELAN fashion"
+        >
+
+        <div class="experience-card">
+
+            <strong>10+</strong>
+
+            <span>
+                Years of<br>
+                fashion inspiration
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="about-content">
+
+        <p class="eyebrow">
+            OUR PHILOSOPHY
+        </p>
+
+        <h2>
+            Fashion with
+            <em>intention.</em>
+        </h2>
+
+        <p>
+            ELAN CLOTHES was created around one simple idea:
+            great clothing should feel as good as it looks.
+        </p>
+
+        <p>
+            We combine contemporary silhouettes, premium
+            materials and thoughtful design to create pieces
+            that belong in your wardrobe for years — not just
+            one season.
+        </p>
+
+        <div class="about-features">
+
+            <div>
+                <i class="fa-solid fa-leaf"></i>
+                <span>Conscious Materials</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-shirt"></i>
+                <span>Premium Craftsmanship</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-recycle"></i>
+                <span>Responsible Production</span>
+            </div>
+
+        </div>
+
+        <a href="#contact" class="text-link">
+            Discover ELAN
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= JOURNAL ================= -->
+
+<section class="journal section" id="journal">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="eyebrow">
+                THE ELAN JOURNAL
+            </p>
+
+            <h2>
+                Style
+                <em>Stories</em>
+            </h2>
+        </div>
+
+        <a href="#" class="text-link">
+            View all
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+
+    <div class="journal-grid">
+
+        <article class="journal-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85"
+                alt="Fashion style"
+            >
+
+            <div class="journal-info">
+
+                <span>STYLE GUIDE</span>
+
+                <h3>
+                    Building a wardrobe
+                    that actually works.
+                </h3>
+
+                <a href="#">
+                    Read story →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="journal-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=85"
+                alt="Fashion trend"
+            >
+
+            <div class="journal-info">
+
+                <span>TRENDS</span>
+
+                <h3>
+                    The new language
+                    of minimal fashion.
+                </h3>
+
+                <a href="#">
+                    Read story →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="journal-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85"
+                alt="ELAN clothing"
+            >
+
+            <div class="journal-info">
+
+                <span>ELAN WORLD</span>
+
+                <h3>
+                    Why conscious fashion
+                    matters.
+                </h3>
+
+                <a href="#">
+                    Read story →
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter">
+
+    <div>
+
+        <p class="eyebrow">
+            JOIN THE ELAN WORLD
+        </p>
+
+        <h2>
+            Stay in
+            <em>style.</em>
+        </h2>
+
+    </div>
+
+    <form id="newsletterForm">
+
+        <input
+            type="email"
+            placeholder="Your email address"
+            required
+        >
+
+        <button type="submit">
+            Subscribe
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="contact">
+
+    <div class="footer-top">
+
+        <div class="footer-brand">
+
+            <a href="#home" class="logo">
+                ELAN<span>.</span>
+            </a>
+
+            <p>
+                Modern clothing for a conscious generation.
+            </p>
+
+            <div class="socials">
+
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Shop</h4>
+
+            <a href="#collection">New Arrivals</a>
+            <a href="#collection">Shirts</a>
+            <a href="#collection">Jackets</a>
+            <a href="#collection">Dresses</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Company</h4>
+
+            <a href="#about">About ELAN</a>
+            <a href="#journal">Journal</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Help</h4>
+
+            <a href="#">Shipping</a>
+            <a href="#">Returns</a>
+            <a href="#">Size Guide</a>
+            <a href="#">FAQs</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 ELAN CLOTHES. All rights reserved.
+        </span>
+
+        <span>
+            Crafted with intention.
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= BAG DRAWER ================= -->
+
+<div class="overlay" id="overlay"></div>
+
+<aside class="bag-drawer" id="bagDrawer">
+
+    <div class="bag-header">
+
+        <div>
+            <p class="eyebrow">YOUR SELECTION</p>
+
+            <h3>
+                Shopping Bag
+            </h3>
+        </div>
+
+        <button id="closeBag">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+
+    <div class="bag-items" id="bagItems">
+
+        <div class="empty-bag">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <h4>Your bag is empty</h4>
+
+            <p>
+                Discover something you love.
+            </p>
+
+            <button id="startShopping">
+                Start Shopping
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="bag-footer">
+
+        <div class="subtotal">
+
+            <span>Subtotal</span>
+
+            <strong id="subtotal">
+                ₹0
+            </strong>
+
+        </div>
+
+        <button class="checkout-btn" id="checkoutBtn">
+            Checkout
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+        <small>
+            Shipping calculated at checkout.
+        </small>
+
+    </div>
+
+</aside>
+
+
+<!-- ================= CHECKOUT MODAL ================= -->
+
+<div class="checkout-modal" id="checkoutModal">
+
+    <div class="checkout-box">
+
+        <button class="modal-close" id="closeCheckout">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <p class="eyebrow">
+            ELAN CHECKOUT
+        </p>
+
+        <h2>
+            Complete your
+            <em>order.</em>
+        </h2>
+
+        <form id="checkoutForm">
+
+            <input
+                type="text"
+                placeholder="Full name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Email address"
+                required
+            >
+
+            <input
+                type="text"
+                placeholder="Delivery address"
+                required
+            >
+
+            <div class="checkout-row">
+
+                <input
+                    type="text"
+                    placeholder="City"
+                    required
+                >
+
+                <input
+                    type="text"
+                    placeholder="PIN code"
+                    required
+                >
+
+            </div>
+
+            <button type="submit" class="checkout-btn">
+                Place Order
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- ================= TOAST ================= -->
+
+<div class="toast" id="toast">
+    <i class="fa-solid fa-check"></i>
+    <span>Added to your bag</span>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
